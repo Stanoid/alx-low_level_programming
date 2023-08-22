@@ -2,9 +2,8 @@
 
 /**
  * print_array - print n of array
- * @x: array 
+ * @x: array
  * @y:output
- 
  */
 void print_array(int *x, int y)
 {

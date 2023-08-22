@@ -19,7 +19,7 @@ int main(void)
 	for (x = 0; x < 100; x++)
 	{
 		pwd[x] = rand() % 78;
-		all += (pwd[i] + '0');
+		all += (pwd[x] + '0');
 		putchar(pwd[x] + '0');
 		if ((2772 - all) - '0' < 78)
 		{
