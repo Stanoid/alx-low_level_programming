@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _atoi -  string to  integer
- * @s: string
+ * _atoi - string to int
+ * @s: string 
  *
- * Return:int
+ * Return: int
  */
-int _atoi(char *str)
+int _atoi(char *s)
 {
-	int x, y, z, len, f, g;
+	int i, d, n, len, f, digit;
 
 	i = 0;
 	d = 0;
@@ -17,25 +17,31 @@ int _atoi(char *str)
 	f = 0;
 	digit = 0;
 
-	while (str[len] != '\0')
+	while (s[len] != '\0')
 		len++;
 
-	while (x < len && f == 0)
+	while (i < len && f == 0)
 	{
-		if (str[x] == '-')
-			++y;
+		if (s[i] == '-')
+			++d;
 
-		if (str[x] >= '0' && str[x] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			g = str[x] - '0';
-			if (y % 2)
-				g = -g;
-			z = z * 10 + g;
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
 			f = 1;
-			if (str[x + 1] < '0' || str[x + 1] > '9')
+			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
 			f = 0;
 		}
-		x++;
+		i++;
 	}
+
+	if (f == 0)
+		return (0);
+
+	return (n);
+}
 

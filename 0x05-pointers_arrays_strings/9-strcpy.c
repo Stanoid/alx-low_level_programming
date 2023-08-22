@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * char *_strcpy - get string in address 
  * @dest: to
